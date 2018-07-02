@@ -15,5 +15,6 @@
 
 iris_dt <- function() {
   library(DT)
-  datatable(iris)
+  idt <- datatable(iris)
+  htmlwidgets::saveWidget(idt, "myidt.html", selfcontained = FALSE)
 }
